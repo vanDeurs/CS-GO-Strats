@@ -1,16 +1,13 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import PropTypes from 'prop-types';
-import '../styles/mapCard.css';
 
-export class mapCard extends React.Component {
+export class mapcard extends React.Component {
 
     render(){
-        return(
-            <div className="wrapper">
-                <h1>{this.props.mapName}></h1>
-            </div>
-        );
+        return <h1>{this.props.mapName}</h1>
+            // <div style={{height: 200, width: 100, background: '#fff'}}>
+            //     <h1>{this.props.mapName}></h1>
+            //     {/* <h1>Hellooo</h1> */}
+            // </div>
     }
 }
 

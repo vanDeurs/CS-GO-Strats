@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import {mapCard} from './components/mapCard';
+import { mapcard } from './components/mapcard';
+import ReactDOM from 'react-dom';
 import './styles/App.css';
 
 export class App extends Component {
@@ -19,14 +20,8 @@ export class App extends Component {
     }
 }
   render() {
-    return (
-        <div className="container">
-          <mapCard 
-            mapName={this.state.map.mirage} 
-          />
-  
-          {/* <h1>Testing testing Helloooooo</h1> */}
-        </div>
-    );
+    return <div className="container"> <mapcard mapName={this.state.map.mirage}/> </div>
   }
 }
+
+ReactDOM.render(<App />, document.getElementById('root'));
