@@ -1,7 +1,9 @@
-.wrapper {
-    width: 200px;
-    height: 200px;
-    background-color: white;
-    justify-content: center;
-    align-items: center;
+.cardContainer{
+  height: 30%;
+  width: 17.5%; 
+  background: #fff;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

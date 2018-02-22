@@ -1,13 +1,21 @@
 import React, { Component } from 'react';
+// import '../styles/App.css';
+import '../styles/Mapcard.css';
 
 export class Mapcard extends React.Component {
 
     render(){
-        return <h1>{this.props.mapName}</h1>
-            // <div style={{height: 200, width: 100, background: '#fff'}}>
-            //     <h1>{this.props.mapName}></h1>
-            //     {/* <h1>Hellooo</h1> */}
-            // </div>
+
+        let backgroundImage = this.props.src
+
+        return (
+            <div 
+                className="cardContainer"
+                style={{backgroundImage: backgroundImage}}
+                >
+                <h1>{this.props.mapName}</h1>
+            </div>
+        );
     }
 }
 
