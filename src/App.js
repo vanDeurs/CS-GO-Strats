@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { mapcard } from './components/mapcard';
+import { Mapcard } from './components/Mapcard.js';
 import ReactDOM from 'react-dom';
 import './styles/App.css';
 
@@ -20,7 +20,7 @@ export class App extends Component {
     }
 }
   render() {
-    return <div className="container"> <mapcard mapName={this.state.map.mirage}/> </div>
+    return <div className="container"> <Mapcard mapName={this.state.map.mirage}/> </div>
   }
 }
 
