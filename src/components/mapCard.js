@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 // import '../styles/App.css';
 import '../styles/Mapcard.css';
 
@@ -11,7 +12,7 @@ export class Mapcard extends React.Component {
         return (
             <div 
                 className="cardContainer"
-                style={{backgroundImage: backgroundImage}}
+                style={{backgroundImage: `url(${backgroundImage})`}}
                 >
                 <h1>{this.props.mapName}</h1>
             </div>
