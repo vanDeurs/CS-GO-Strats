@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-// import '../styles/App.css';
 import '../styles/Mapcard.css';
 
 export class Mapcard extends React.Component {
@@ -14,7 +13,9 @@ export class Mapcard extends React.Component {
                 className="cardContainer"
                 style={{backgroundImage: `url(${backgroundImage})`}}
                 >
-                <h1>{this.props.mapName}</h1>
+                <div className="overlayContainer">
+                    <h1 id="mapName">{this.props.mapName}</h1>
+                </div>
             </div>
         );
     }
