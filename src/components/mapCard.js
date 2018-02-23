@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import '../styles/Mapcard.css';
+import { Link } from 'react-router-dom';
 
 export class Mapcard extends React.Component {
 
     render(){
 
-        let backgroundImage = this.props.src
+        let backgroundImage = this.props.src;
 
         return (
             <div 
@@ -14,7 +15,7 @@ export class Mapcard extends React.Component {
                 style={{backgroundImage: `url(${backgroundImage})`}}
                 >
                 <div className="overlayContainer">
-                    <h1 id="mapName">{this.props.mapName}</h1>
+                    <Link to={'/map/' + this.props.mapName} id="mapName">{this.props.mapName}</Link>
                 </div>
             </div>
         );

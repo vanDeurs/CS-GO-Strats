@@ -12,13 +12,10 @@ import dust2 from './images/dust2.jpg';
 import cobble from './images/cobble.jpg';
 import overpass from './images/overpass.jpg';
 
+import { Link } from 'react-router-dom';
 
-export class App extends Component {
-  constructor(props){
-    super(props)
-    this.state = {
-    }
-}
+
+export class Home extends Component {
 
   render() {
 
@@ -39,5 +36,3 @@ export class App extends Component {
     );
   }
 }
-
-ReactDOM.render(<App />, document.getElementById('root'));
