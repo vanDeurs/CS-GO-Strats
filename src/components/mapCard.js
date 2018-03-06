@@ -15,7 +15,7 @@ export class Mapcard extends React.Component {
                 style={{backgroundImage: `url(${backgroundImage})`}}
                 >
                 <div className="overlayContainer">
-                    <Link to={'/map/' + this.props.mapName} id="mapName">{this.props.mapName}</Link>
+                    <Link to={this.props.mapName} id="mapName">{this.props.mapName}</Link>
                 </div>
             </div>
         );

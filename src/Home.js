@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { Mapcard } from './components/Mapcard';
 import ReactDOM from 'react-dom';
+import {RenderMao} from './components/RenderMap'
 import './styles/App.css';
+import App from './index';
 // Images
 import cache from './images/cache.jpg';
 import mirage from './images/mirage.jpg';
@@ -21,6 +23,8 @@ export class Home extends Component {
 
     let maps = ['train', 'cache', 'overpass', 'mirage', 'nuke', 'cobblestone', 'inferno', 'dust2'];
     let mapImages = [train, cache, overpass, mirage, nuke, cobble, inferno, dust2];
+
+    let map = this.props.map;
 
     let renderMapCards = () => {
       return maps
