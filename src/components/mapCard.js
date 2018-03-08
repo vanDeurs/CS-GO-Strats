@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import '../styles/Mapcard.css';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 export class Mapcard extends React.Component {
 
@@ -20,8 +21,12 @@ export class Mapcard extends React.Component {
             </div>
         );
     }
-}
 
+}
+Mapcard.propTypes = {
+    src: PropTypes.string.isRequired,
+    mapName: PropTypes.string.isRequired,
+  };
 // mapCard.propTypes = {
 //     mapName: React.PropTypes.string
 //   };
