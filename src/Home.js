@@ -21,11 +21,11 @@ export class Home extends Component {
 
   render() {
 
+    // Array of map names.
     let maps = ['train', 'cache', 'overpass', 'mirage', 'nuke', 'cobblestone', 'inferno', 'dust2'];
+    // Array of map images.
     let mapImages = [train, cache, overpass, mirage, nuke, cobble, inferno, dust2];
-
-    let map = this.props.map;
-
+    // Function that returns each map name and map image in the component <MapCard/>.
     let renderMapCards = () => {
       return maps
           .map((map, index) => {
@@ -33,6 +33,7 @@ export class Home extends Component {
           })
   }
 
+    // Returns a container with all the map components.
     return ( 
       <div className="container"> 
         {renderMapCards()}

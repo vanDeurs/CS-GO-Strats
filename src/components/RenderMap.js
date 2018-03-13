@@ -20,7 +20,7 @@ import overpasshd from '../images/hd/overpasshd.png';
 import cobblestonehd from '../images/hd/cobblestonehd.jpg';
 import dust2hd from '../images/hd/dust2hd.png';
 
-
+import index from '../index';
 
 import {MiddlePicker} from '../containers/MiddlePicker';
 
@@ -31,67 +31,75 @@ import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
 import { Mapcard } from './Mapcard';
 import {App} from '../index';
+import { BrowserRouter, Route } from 'react-router-dom';
 
-export class RenderMap extends Component {
-
-  render() {
-      if (/train/.test(window.location.href)){
-          return(
-              <MiddlePicker 
-              backgroundImage = {trainhd}
-              //links={dust2}
-              />
+// Stateless Component Function
+// Checks if the url contains the map name, and then returns 
+// the Middlepicker component with the prop background that is the current map.
+export const RenderMap = ({location}) => {
+    const pathName = location.pathname;
+    
+    console.log(pathName)
+    if (pathName == '/train'){
+        return(
+            <MiddlePicker 
+            backgroundImage = {trainhd}
+            //links={dust2}
+            />
         )  
-      } else if (/cache/.test(window.location.href)){
+      } else if (pathName == '/cache'){
             return(
                 <MiddlePicker 
                 backgroundImage = {cachehd}
                 //links={dust2}
                 />
             )
-      } else if (/overpass/.test(window.location.href)){
+      } else if (pathName == '/overpass'){
             return(
                 <MiddlePicker 
                 backgroundImage = {overpasshd}
                 //links={dust2}
                 />
             )
-        } else if (/mirage/.test(window.location.href)){
+        } else if (pathName == '/mirage'){
             return(
                 <MiddlePicker 
                 backgroundImage = {miragehd}
                 //links={dust2}
                 />
             )
-      } else if (/nuke/.test(window.location.href)){
+      } else if (pathName == '/nuke'){
             return(
                 <MiddlePicker 
                 backgroundImage = {nukehd}
                 //links={dust2}
                 />
             )
-        } else if (/cobblestone/.test(window.location.href)){
+        } else if (pathName == '/cobblestone'){
             return(
                 <MiddlePicker 
                 backgroundImage = {cobblestonehd}
                 //links={dust2}
                 />
             )
-      } else if (/inferno/.test(window.location.href)){
+      } else if (pathName == '/inferno'){
             return(
                 <MiddlePicker 
                 backgroundImage = {infernohd}
                 //links={dust2}
                 />
             )
-        } else if (/dust2/.test(window.location.href)){
+        } else if (pathName == '/dust2'){
             return(
                 <MiddlePicker 
                 backgroundImage = {dust2hd}
                 //links={dust2}
                 />
             )
+      } else {
+          return (
+              <h1>Oops, this page does not exist.</h1>
+          )
       }
-  }
 }
 
