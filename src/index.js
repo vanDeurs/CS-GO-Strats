@@ -1,12 +1,10 @@
-import React, { Component } from 'react';
-// import './styles/App.css';
-import ReactDOM             from 'react-dom';
-import { Home }             from './Home.js';
+import React, { Component }     from 'react';
+import ReactDOM                 from 'react-dom';
+import { Home }                 from './Home.js';
 import './styles/index.css';
-import { RenderMap }        from './components/RenderMap';
-import { RenderStrategies } from './components/RenderStrategies';
-import { RenderSetups }     from './components/RenderSetups';
-
+import { RenderMap }            from './components/RenderMap';
+import { RenderStrategies }     from './components/RenderStrategies';
+import { RenderSetups }         from './components/RenderSetups';
 import { BrowserRouter, Route } from 'react-router-dom';
 
 export class App extends Component {

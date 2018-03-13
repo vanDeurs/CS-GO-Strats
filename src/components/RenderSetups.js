@@ -27,10 +27,10 @@ import {MiddlePicker} from '../containers/MiddlePicker';
 
 import Home from '../Home'
 
-import ReactDOM from 'react-dom';
-import { Link } from 'react-router-dom';
-import { Mapcard } from './mapCard';
-import {App} from '../index';
+import ReactDOM                 from 'react-dom';
+import { Link }                 from 'react-router-dom';
+import { Mapcard }              from './mapCard';
+import { App }                  from '../index';
 import { BrowserRouter, Route } from 'react-router-dom';
 
 // Stateless Component Function
