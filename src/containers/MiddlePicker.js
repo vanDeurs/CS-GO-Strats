@@ -18,8 +18,8 @@ export class MiddlePicker extends Component {
         return ( 
             <div className="middleContainer" style={{backgroundImage: `url(${background})`}}>
                 <div className="innerContainer">
-                    <div className="strategiButton"><h1 className="buttonText">Strategies</h1></div>
-                    <div className="setupButton"><h1 className="buttonText">Setups</h1></div>
+                    <Link to={this.props.linkStrategies} className="strategiButton"><h1 className="buttonText">Strategies</h1></Link>
+                    <Link to={this.props.linkSetups} className="setupButton"><h1 className="buttonText">Setups</h1></Link>
                 </div>
             </div>
         );

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Mapcard } from './components/Mapcard';
+import { Mapcard } from './components/mapCard';
 import ReactDOM from 'react-dom';
 import {RenderMao} from './components/RenderMap'
 import './styles/App.css';

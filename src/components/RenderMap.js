@@ -29,7 +29,7 @@ import Home from '../Home'
 
 import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
-import { Mapcard } from './Mapcard';
+// import { Mapcard } from './Mapcard';
 import {App} from '../index';
 import { BrowserRouter, Route } from 'react-router-dom';
 
@@ -44,56 +44,64 @@ export const RenderMap = ({location}) => {
         return(
             <MiddlePicker 
             backgroundImage = {trainhd}
-            //links={dust2}
+            linkStrategies={'train/strategies'}
+            linkSetups={'train/setups'}
             />
         )  
       } else if (pathName == '/cache'){
             return(
                 <MiddlePicker 
                 backgroundImage = {cachehd}
-                //links={dust2}
+                linkStrategies={'cache/strategies'}
+                linkSetups={'cache/setups'}
                 />
             )
       } else if (pathName == '/overpass'){
             return(
                 <MiddlePicker 
                 backgroundImage = {overpasshd}
-                //links={dust2}
+                linkStrategies={'overpass/strategies'}
+                linkSetups={'overpass/setups'}
                 />
             )
         } else if (pathName == '/mirage'){
             return(
                 <MiddlePicker 
                 backgroundImage = {miragehd}
-                //links={dust2}
+                linkStrategies={'mirage/strategies'}
+                linkSetups={'mirage/setups'}
                 />
             )
       } else if (pathName == '/nuke'){
             return(
                 <MiddlePicker 
                 backgroundImage = {nukehd}
-                //links={dust2}
+                linkStrategies={'nuke/strategies'}
+                linkSetups={'nuke/setups'}
                 />
             )
         } else if (pathName == '/cobblestone'){
             return(
                 <MiddlePicker 
                 backgroundImage = {cobblestonehd}
-                //links={dust2}
+                linkStrategies={'cobblestone/strategies'}
+                linkSetups={'cobblestone/setups'}
                 />
             )
       } else if (pathName == '/inferno'){
             return(
                 <MiddlePicker 
                 backgroundImage = {infernohd}
-                //links={dust2}
+                linkStrategies={'inferno/strategies'}
+                linkSetups={'inferno/setups'}
                 />
             )
         } else if (pathName == '/dust2'){
             return(
                 <MiddlePicker 
                 backgroundImage = {dust2hd}
-                //links={dust2}
+                linkStrategies={'dust2/strategies'}
+                linkSetups={'dust2/setups'}
                 />
             )
       } else {
