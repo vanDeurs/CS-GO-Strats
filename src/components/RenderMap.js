@@ -38,6 +38,20 @@ import {App}            from '../index';
 // the Middlepicker component with the prop background that is the current map.
 export const RenderMap = ({location}) => {
     const pathName = location.pathname;
+    let maps = ['train', 'cache', 'overpass', 'mirage', 'nuke', 'cobblestone', 'inferno', 'dust2'];
+    let mapImages = [trainhd, cachehd, overpasshd, miragehd, nukehd, cobblehd, infernohd, dust2hd];
+
+    for(let i = 0; i < maps.length; i++ ){
+        if (pathName == '/' + maps[i]){
+            return (
+                <MiddlePicker 
+                backgroundImage = {mapImages[i]}
+                linkStrategies={ maps[i] + '/strategies'}
+                linkSetups={ maps[i] + '/setups'}
+                />
+            )
+        }
+    }
     
     console.log(pathName)
     if (pathName == '/train'){
