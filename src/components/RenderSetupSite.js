@@ -37,21 +37,19 @@ import {App}            from '../index';
 // Stateless Component Function
 // Checks if the url contains the map name, and then returns 
 // the Middlepicker component with the prop background that is the current map.
-export const RenderStrategies = ({location}) => {
+export const RenderSetupSite = ({location}) => {
     const pathName = location.pathname;
     let maps = ['train', 'cache', 'overpass', 'mirage', 'nuke', 'cobblestone', 'inferno', 'dust2'];
     let mapImages = [trainhd, cachehd, overpasshd, miragehd, nukehd, cobblestonehd, infernohd, dust2hd];
-    let site = ['A', 'B', 'middle']
+    let site = ['A', 'B', 'Middle']
 
     for(let i = 0; i < maps.length; i++ ){
-        if (pathName == '/' + maps[i] + '/strategies'){
+        if (pathName == '/' + maps[i] + '/setups'){
             return (
                 <StrategySitePicker
-                backgroundImage={mapImages[i]}
-                linkStratA={maps[i] + '/strategies/' + site[0] }
-                linkStratB={ maps[i] + '/strategies/' + site[1] } 
-                linkStratMiddle={ maps[i] + '/strategies/' + site[2] }
-            />
+                    backgroundImage={mapImages[i]}
+                    linkSetup={ maps[i] + '/setups' + site[0] }
+                />
             )
         }
     }

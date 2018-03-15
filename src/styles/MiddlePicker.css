@@ -24,6 +24,8 @@
     -webkit-box-shadow: 0px 0px 28px 14px rgba(0,0,0,0.57);
     -moz-box-shadow: 0px 0px 28px 14px rgba(0,0,0,0.57);
     box-shadow: 0px 0px 28px 14px rgba(0,0,0,0.57);
+    text-decoration-line: none;
+    transition: 0.25s ease;
 }
 .setupButton {
     width: 30%;
@@ -36,10 +38,49 @@
     -webkit-box-shadow: 0px 0px 28px 14px rgba(0,0,0,0.57);
     -moz-box-shadow: 0px 0px 28px 14px rgba(0,0,0,0.57);
     box-shadow: 0px 0px 28px 14px rgba(0,0,0,0.57);
+    text-decoration-line: none;
+    transition: 0.25s ease;
 }
 
 .buttonText {
     font-size: 40px;
     color: #eee;
+    text-decoration-line: none;
+    padding: 20px 10px;
+    border-top: 8px solid #fff;
+    border-bottom: 8px solid #fff;
+    transition: 0.25s ease;
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+}
+
+.buttonText:hover {
+    border-right: 8px solid #fff;
+    border-left: 8px solid #fff;
+    border-top: 8px solid #fff;
+    border-bottom: 8px solid #fff;
+    border-radius: 15px;
+}
+
+.strategiButton:hover {
+    margin-top: 3px;
+    -webkit-box-shadow: 0px 0px 14px 10px rgba(0,0,0,0.57);
+    -moz-box-shadow: 0px 0px 14px 10px rgba(0,0,0,0.57);
+}
+
+.setupButton:hover {
+    margin-top: 3px;
+    -webkit-box-shadow: 0px 0px 14px 10px rgba(0,0,0,0.57);
+    -moz-box-shadow: 0px 0px 14px 10px rgba(0,0,0,0.57);
+}
+
+.strategiButton .buttonText:hover {
+    background-color: #fff;
+    color: #FF6A11;
+}
+
+.setupButton .buttonText:hover {
+    background-color: #fff;
+    color: #0C0DAD;
 }
 

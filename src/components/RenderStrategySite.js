@@ -27,6 +27,7 @@ import {MiddlePicker}   from '../containers/MiddlePicker';
 import {StrategySitePicker} from '../containers/StrategySitePicker'
 
 
+
 import Home             from '../Home'
 
 import ReactDOM         from 'react-dom';
@@ -37,21 +38,16 @@ import {App}            from '../index';
 // Stateless Component Function
 // Checks if the url contains the map name, and then returns 
 // the Middlepicker component with the prop background that is the current map.
-export const RenderStrategies = ({location}) => {
+export const RenderStrategySite = ({location}) => {
     const pathName = location.pathname;
     let maps = ['train', 'cache', 'overpass', 'mirage', 'nuke', 'cobblestone', 'inferno', 'dust2'];
     let mapImages = [trainhd, cachehd, overpasshd, miragehd, nukehd, cobblestonehd, infernohd, dust2hd];
-    let site = ['A', 'B', 'middle']
+    let site = ['A', 'B', 'Middle']
 
     for(let i = 0; i < maps.length; i++ ){
-        if (pathName == '/' + maps[i] + '/strategies'){
+        if (pathName == '/' + maps[i] + maps[i] +'/strategies' + 'A'){
             return (
-                <StrategySitePicker
-                backgroundImage={mapImages[i]}
-                linkStratA={maps[i] + '/strategies/' + site[0] }
-                linkStratB={ maps[i] + '/strategies/' + site[1] } 
-                linkStratMiddle={ maps[i] + '/strategies/' + site[2] }
-            />
+                <h1>Hello, {maps[i]}</h1>
             )
         }
     }

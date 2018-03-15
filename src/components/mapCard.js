@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import '../styles/mapCard.css';
+import '../styles/Mapcard.css';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
@@ -13,8 +13,7 @@ export class Mapcard extends Component {
         return (
             <div 
                 className="cardContainer"
-                style={{backgroundImage: `url(${backgroundImage})`}}
-                >
+                style={{backgroundImage: `url(${backgroundImage})`}}>
                 <div className="overlayContainer">
                     <Link to={this.props.mapName} id="mapName">{this.props.mapName}</Link>
                 </div>
@@ -27,6 +26,3 @@ Mapcard.propTypes = {
     src: PropTypes.string.isRequired,
     mapName: PropTypes.string.isRequired,
   };
-// mapCard.propTypes = {
-//     mapName: React.PropTypes.string
-//   };
