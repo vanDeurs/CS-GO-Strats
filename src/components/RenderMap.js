@@ -39,7 +39,7 @@ import {App}            from '../index';
 export const RenderMap = ({location}) => {
     const pathName = location.pathname;
     let maps = ['train', 'cache', 'overpass', 'mirage', 'nuke', 'cobblestone', 'inferno', 'dust2'];
-    let mapImages = [trainhd, cachehd, overpasshd, miragehd, nukehd, cobblehd, infernohd, dust2hd];
+    let mapImages = [trainhd, cachehd, overpasshd, miragehd, nukehd, cobblestonehd, infernohd, dust2hd];
 
     for(let i = 0; i < maps.length; i++ ){
         if (pathName == '/' + maps[i]){
@@ -52,76 +52,4 @@ export const RenderMap = ({location}) => {
             )
         }
     }
-    
-    console.log(pathName)
-    if (pathName == '/train'){
-        return(
-            <MiddlePicker 
-            backgroundImage = {trainhd}
-            linkStrategies={'train/strategies'}
-            linkSetups={'train/setups'}
-            />
-        )  
-      } else if (pathName == '/cache'){
-            return(
-                <MiddlePicker 
-                backgroundImage = {cachehd}
-                linkStrategies={'cache/strategies'}
-                linkSetups={'cache/setups'}
-                />
-            )
-      } else if (pathName == '/overpass'){
-            return(
-                <MiddlePicker 
-                backgroundImage = {overpasshd}
-                linkStrategies={'overpass/strategies'}
-                linkSetups={'overpass/setups'}
-                />
-            )
-        } else if (pathName == '/mirage'){
-            return(
-                <MiddlePicker 
-                backgroundImage = {miragehd}
-                linkStrategies={'mirage/strategies'}
-                linkSetups={'mirage/setups'}
-                />
-            )
-      } else if (pathName == '/nuke'){
-            return(
-                <MiddlePicker 
-                backgroundImage = {nukehd}
-                linkStrategies={'nuke/strategies'}
-                linkSetups={'nuke/setups'}
-                />
-            )
-        } else if (pathName == '/cobblestone'){
-            return(
-                <MiddlePicker 
-                backgroundImage = {cobblestonehd}
-                linkStrategies={'cobblestone/strategies'}
-                linkSetups={'cobblestone/setups'}
-                />
-            )
-      } else if (pathName == '/inferno'){
-            return(
-                <MiddlePicker 
-                backgroundImage = {infernohd}
-                linkStrategies={'inferno/strategies'}
-                linkSetups={'inferno/setups'}
-                />
-            )
-        } else if (pathName == '/dust2'){
-            return(
-                <MiddlePicker 
-                backgroundImage = {dust2hd}
-                linkStrategies={'dust2/strategies'}
-                linkSetups={'dust2/setups'}
-                />
-            )
-      } else {
-          return (
-              <h1>Oops, this page does not exist.</h1>
-          )
-      }
 }
-

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component }     from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 
 // Containers
@@ -25,54 +25,27 @@ import index            from '../index';
 
 import {MiddlePicker}   from '../containers/MiddlePicker';
 
+
 import Home             from '../Home'
 
 import ReactDOM         from 'react-dom';
 import { Link }         from 'react-router-dom';
 import {App}            from '../index';
 
+
 // Stateless Component Function
-// Checks if the url contains the map name
+// Checks if the url contains the map name, and then returns 
+// the Middlepicker component with the prop background that is the current map.
 export const RenderStrategies = ({location}) => {
     const pathName = location.pathname;
-    
-    console.log(pathName)
-    if (pathName == '/train/strategies'){
-        return(
-            <h1>Hello train strategies</h1>
-        )  
-      } else if (pathName == '/mirage/strategies'){
-        return(
-            <h1>Hello mirage strategies</h1>
-        )
-    } else if (pathName == '/inferno/strategies'){
-        return(
-            <h1>Hello inferno strategies</h1>
-        )
-    } else if (pathName == '/overpass/strategies'){
-        return(
-            <h1>Hello overpass strategies</h1>
-        )
-    } else if (pathName == '/nuke/strategies'){
-        return(
-            <h1>Hello nuke strategies</h1>
-        )
-    } else if (pathName == '/dust2/strategies'){
-        return(
-            <h1>Hello dust2 strategies</h1>
-        )
-    } else if (pathName == '/cobblestone/strategies'){
-        return(
-            <h1>Hello cobblestone strategies</h1>
-        )
-    } else if (pathName == '/cache/strategies'){
-        return(
-            <h1>Hello cache strategies</h1>
-        )
-    } else {
-          return (
-              <h1>Oops, this strategi page does not exist.</h1>
-          )
-      }
-}
+    let maps = ['train', 'cache', 'overpass', 'mirage', 'nuke', 'cobblestone', 'inferno', 'dust2'];
+    let mapImages = [trainhd, cachehd, overpasshd, miragehd, nukehd, cobblestonehd, infernohd, dust2hd];
 
+    for(let i = 0; i < maps.length; i++ ){
+        if (pathName == '/' + maps[i] + '/strategies'){
+            return (
+                <h1>Hello strats, {maps[i]}</h1>
+            )
+        }
+    }
+}
