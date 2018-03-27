@@ -47,10 +47,10 @@ export const RenderStrategies = ({location}) => {
         if (pathName == '/' + maps[i] + '/strategies'){
             return (
                 <StrategySitePicker
-                backgroundImage={mapImages[i]}
-                linkStratA={maps[i] + '/strategies/' + site[0] }
-                linkStratB={ maps[i] + '/strategies/' + site[1] } 
-                linkStratMiddle={ maps[i] + '/strategies/' + site[2] }
+                    backgroundImage={ mapImages[i] }
+                    linkStratA={ pathName + '/' + site[0] }
+                    linkStratB={ pathName + '/' +  site[1] } 
+                    linkStratMiddle={ pathName + '/' +  site[2] }
             />
             )
         }

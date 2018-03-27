@@ -36,7 +36,7 @@ export class App extends Component {
                     <Route exact path='/:map' component={RenderMap}/>
                     <Route exact path='/:map/strategies' component={RenderStrategies}/>
                     <Route exact path='/:map/setups' component={RenderSetups}/>
-                    {/* <Route exact path='/:map/:map/strategies/A' component={RenderStrategySite}/> */}
+                    <Route exact path='/:map/strategies/:site' component={RenderStrategySite}/>
                 </Switch>
             </HashRouter>
             // <p>{this.state.response}</p>

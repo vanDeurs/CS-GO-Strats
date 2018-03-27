@@ -45,9 +45,10 @@ export const RenderStrategySite = ({location}) => {
     let site = ['A', 'B', 'Middle']
 
     for(let i = 0; i < maps.length; i++ ){
-        if (pathName == '/' + maps[i] + maps[i] +'/strategies' + 'A'){
+        console.log(i)
+        if (pathName == '/' + maps[i] +'/strategies' + '/' + site[0] || site[1] || site[2]){ 
             return (
-                <h1>Hello, {maps[i]}</h1>
+                <h1>Hello, strategy on {maps[i]} (BUG)</h1>
             )
         }
     }
