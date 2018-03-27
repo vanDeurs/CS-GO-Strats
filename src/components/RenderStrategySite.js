@@ -27,7 +27,6 @@ import {MiddlePicker}   from '../containers/MiddlePicker';
 import {StrategySitePicker} from '../containers/StrategySitePicker'
 
 
-
 import Home             from '../Home'
 
 import ReactDOM         from 'react-dom';
@@ -42,12 +41,14 @@ export const RenderStrategySite = ({location}) => {
     const pathName = location.pathname;
     let maps = ['train', 'cache', 'overpass', 'mirage', 'nuke', 'cobblestone', 'inferno', 'dust2'];
     let mapImages = [trainhd, cachehd, overpasshd, miragehd, nukehd, cobblestonehd, infernohd, dust2hd];
-    let site = ['A', 'B', 'Middle']
+    let site = ['A', 'B', 'middle']
+
+    // let sitesite = 
 
     for(let i = 0; i < maps.length; i++ ){
-        if (pathName == '/' + maps[i] + maps[i] +'/strategies' + 'A'){
+        if (pathName == '/' + maps[i] + '/strategies/' + site[0] || site[1] || site[2]){
             return (
-                <h1>Hello, {maps[i]}</h1>
+                <h1>Hello strategies for {pathName}</h1>
             )
         }
     }

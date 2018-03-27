@@ -46,8 +46,8 @@ export const RenderMap = ({location}) => {
             return (
                 <MiddlePicker 
                 backgroundImage = {mapImages[i]}
-                linkStrategies={ maps[i] + '/strategies'}
-                linkSetups={ maps[i] + '/setups'}
+                linkStrategies={ pathName + '/strategies'}
+                linkSetups={ pathName + '/setups'}
                 />
             )
         }
