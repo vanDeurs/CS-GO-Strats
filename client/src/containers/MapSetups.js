@@ -34,7 +34,7 @@ import { Link }         from 'react-router-dom';
 import {App}            from '../index';
 
 
-export class MapStrategies extends Component {
+export class MapSetups extends Component {
     constructor(props){
         super(props)
         this.state = {
@@ -50,6 +50,7 @@ export class MapStrategies extends Component {
         let maps = ['train', 'cache', 'overpass', 'mirage', 'nuke', 'cobblestone', 'inferno', 'dust2'];
         let mapImages = [trainhd, cachehd, overpasshd, miragehd, nukehd, cobblestonehd, infernohd, dust2hd];
         let text;
+        
         switch(this.props.map) {
             case "train":
             text = "Train is good!";

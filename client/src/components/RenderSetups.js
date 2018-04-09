@@ -31,6 +31,7 @@ import Home             from '../Home'
 import ReactDOM         from 'react-dom';
 import { Link }         from 'react-router-dom';
 import {App}            from '../index';
+import { MapSetups } from '../containers/MapSetups';
 
 
 // Stateless Component Function
@@ -44,7 +45,7 @@ export const RenderSetups = ({location}) => {
     for(let i = 0; i < maps.length; i++ ){
         if (pathName == '/' + maps[i] + '/setups'){
             return (
-                <h1>Hello setups, {maps[i]}</h1>
+                <MapSetups map={maps[i]}/>
             )
         }
     }
