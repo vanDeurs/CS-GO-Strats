@@ -31,7 +31,7 @@ export class Home extends Component {
           .map((map, index) => {
               return <Mapcard mapName={map} src={mapImages[index]} key={index}/>
           })
-  }
+    }
 
     // Returns a container with all the map components.
     return ( 

@@ -1,15 +1,6 @@
 import React, { Component }     from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 
-// Containers
-import {Trainc}         from '../containers/Trainc';
-import {Miragec}        from '../containers/Miragec';
-import {Infernoc}       from '../containers/Infernoc';
-import {Nukec}          from '../containers/Nukec';
-import {Cobblestonec}   from '../containers/Cobblestonec';
-import {Overpassc}      from '../containers/Overpassc';
-import {Dust2c}         from '../containers/Dust2c';
-import {Cachec}         from '../containers/Cachec';
 
 // Images
 import miragehd         from '../images/hd/miragehd.jpg';

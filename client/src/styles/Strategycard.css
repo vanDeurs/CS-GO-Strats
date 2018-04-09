@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+.strategyCardContainer {
+    height: 22.5vh;
+    width: 50vw;
+    min-width: 900px;
+    background: rgba(255, 255, 255, 1);
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    padding: 2vh 3vw;
+}
+
+h1 {
+    font-size: 35px;
+    color: #333;
+}
+
+h2 {
+    font-size: 25px;
+    color: #333;
+}

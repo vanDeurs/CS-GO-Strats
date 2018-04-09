@@ -1,15 +1,7 @@
 import React, { Component }     from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 
-// Containers
-import {Trainc}         from '../containers/Trainc';
-import {Miragec}        from '../containers/Miragec';
-import {Infernoc}       from '../containers/Infernoc';
-import {Nukec}          from '../containers/Nukec';
-import {Cobblestonec}   from '../containers/Cobblestonec';
-import {Overpassc}      from '../containers/Overpassc';
-import {Dust2c}         from '../containers/Dust2c';
-import {Cachec}         from '../containers/Cachec';
+import '../styles/Mapstrategies.css';
 
 // Images
 import miragehd         from '../images/hd/miragehd.jpg';
@@ -24,6 +16,7 @@ import dust2hd          from '../images/hd/dust2hd.png';
 import index            from '../index';
 
 import {MiddlePicker}   from '../containers/MiddlePicker';
+import {TopTable} from '../components/TopTable';
 
 
 import Home             from '../Home'
@@ -32,6 +25,7 @@ import Home             from '../Home'
 import ReactDOM         from 'react-dom';
 import { Link }         from 'react-router-dom';
 import {App}            from '../index';
+import { StrategyCard } from '../components/StrategyCard';
 
 
 export class MapStrategies extends Component {
@@ -39,6 +33,7 @@ export class MapStrategies extends Component {
         super(props)
         this.state = {
             currentMap: null,
+            strategies: [1, 2, 3, 4, 5],
         }
     }
 
@@ -47,8 +42,6 @@ export class MapStrategies extends Component {
     }
 
     getMapPick = () => {
-        let maps = ['train', 'cache', 'overpass', 'mirage', 'nuke', 'cobblestone', 'inferno', 'dust2'];
-        let mapImages = [trainhd, cachehd, overpasshd, miragehd, nukehd, cobblestonehd, infernohd, dust2hd];
         let text;
         switch(this.props.map) {
             case "train":
@@ -84,8 +77,22 @@ export class MapStrategies extends Component {
     }
     render(){
 
+
+
+      // Render the strategy cards. Map through the array of strategys.
+      let renderStrategyCards = () => {
+        const {strategies} = this.state
+        return strategies
+            .map((strategy, index) => {
+                return <StrategyCard mapName={this.state.currentMap} key={index} strategyName={'Strategy' + index} strategySummary="Strategy summary whoho"/>
+            })
+      }
+
         return(
-            <h1>{`I am not a fan of ${this.state.currentMap}`}</h1>
+            <div className="strategiesContainer">
+              <TopTable currentMap={this.state.currentMap}/>
+              {renderStrategyCards()}
+            </div>
         )
     }
 }
