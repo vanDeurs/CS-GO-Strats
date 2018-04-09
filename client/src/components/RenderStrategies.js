@@ -24,19 +24,20 @@ import dust2hd          from '../images/hd/dust2hd.png';
 import index            from '../index';
 
 import {MiddlePicker}   from '../containers/MiddlePicker';
-import {StrategySitePicker} from '../containers/StrategySitePicker'
 
 
 import Home             from '../Home'
 
+
 import ReactDOM         from 'react-dom';
 import { Link }         from 'react-router-dom';
 import {App}            from '../index';
+import { MapStrategies } from '../containers/MapStrategies';
 
 
-// Stateless Component Function
-// Checks if the url contains the map name, and then returns 
-// the Middlepicker component with the prop background that is the current map.
+// // Stateless Component Function
+// // Checks if the url contains the map name, and then returns 
+// // the Middlepicker component with the prop background that is the current map.
 export const RenderStrategies = ({location}) => {
     const pathName = location.pathname;
     let maps = ['train', 'cache', 'overpass', 'mirage', 'nuke', 'cobblestone', 'inferno', 'dust2'];
@@ -46,13 +47,9 @@ export const RenderStrategies = ({location}) => {
     for(let i = 0; i < maps.length; i++ ){
         if (pathName == '/' + maps[i] + '/strategies'){
             return (
-                <StrategySitePicker
-                    backgroundImage={ mapImages[i] }
-                    linkStratA={ pathName + '/' + site[0] }
-                    linkStratB={ pathName + '/' +  site[1] } 
-                    linkStratMiddle={ pathName + '/' +  site[2] }
-            />
+                <MapStrategies map={maps[i]}/>
             )
         }
     }
 }
+

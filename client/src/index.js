@@ -6,7 +6,6 @@ import { RenderMap }            from './components/RenderMap';
 import { RenderStrategies }     from './components/RenderStrategies';
 import { RenderSetups }         from './components/RenderSetups';
 import { BrowserRouter, Route, HashRouter, Link, Switch } from 'react-router-dom';
-import { RenderStrategySite } from './components/RenderStrategySite.js';
 
 export class App extends Component {
     state = {
@@ -36,7 +35,6 @@ export class App extends Component {
                     <Route exact path='/:map' component={RenderMap}/>
                     <Route exact path='/:map/strategies' component={RenderStrategies}/>
                     <Route exact path='/:map/setups' component={RenderSetups}/>
-                    <Route exact path='/:map/strategies/:site' component={RenderStrategySite}/>
                 </Switch>
             </HashRouter>
             // <p>{this.state.response}</p>
