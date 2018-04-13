@@ -4,7 +4,9 @@ import ReactDOM from 'react-dom';
 // import {RenderMap} from './components/RenderMap'
 import App from '../index';
 // Images
-import '../styles/MiddlePicker.css';
+// import '../styles/MiddlePicker.css';
+import '../styles/index.css';
+
 import miragehd from '../images/hd/miragehd.jpg';
 
 import { Link } from 'react-router-dom';

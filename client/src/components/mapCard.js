@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import '../styles/Mapcard.css';
+// import '../styles/Mapcard.css';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import '../styles/index.css';
 
 export class Mapcard extends Component {
 

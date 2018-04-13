@@ -3,7 +3,8 @@ import { BrowserRouter, Route } from 'react-router-dom';
 
 import ReactDOM         from 'react-dom';
 import {App}            from '../index';
-import '../styles/Toptable.css';
+// import '../styles/Toptable.css';
+import '../styles/index.css';
 
 export class TopTable extends Component {
     constructor(props){

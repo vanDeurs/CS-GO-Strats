@@ -1,7 +1,8 @@
 import React, { Component }     from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 
-import '../styles/Mapstrategies.css';
+// import '../styles/Mapstrategies.css';
+import '../styles/index.css';
 
 // Images
 import miragehd         from '../images/hd/miragehd.jpg';
