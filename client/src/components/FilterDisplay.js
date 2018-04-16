@@ -6,7 +6,7 @@ import {App}            from '../index';
 import '../styles/index.css';
 
 
-export class AddStrategyButton extends Component {
+export class FilterDisplay extends Component {
     constructor(props){
         super(props)
         this.state = {
@@ -19,13 +19,13 @@ export class AddStrategyButton extends Component {
     render(){
 
         const {
-            something
+            filter
         } = this.props
 
         return(
-            <button type="button" className="addButton">
-                <h2 className="addStrategyButtonText">+</h2>
-            </button>
+            <div className="filterTypeContainer">
+                <p className="filterTypeText">{`Filter: ${this.props.filter}`}</p>
+            </div>
         )
     }
 }

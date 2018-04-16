@@ -6,7 +6,7 @@ import {App}            from '../index';
 import '../styles/index.css';
 
 
-export class AddStrategyButton extends Component {
+export class FilterButton extends Component {
     constructor(props){
         super(props)
         this.state = {
@@ -23,9 +23,9 @@ export class AddStrategyButton extends Component {
         } = this.props
 
         return(
-            <button type="button" className="addButton">
-                <h2 className="addStrategyButtonText">+</h2>
-            </button>
+            <div className="filterButton">
+                <p className="filterButtonText">Filter</p>
+            </div>
         )
     }
 }
