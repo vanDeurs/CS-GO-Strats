@@ -24,7 +24,7 @@ export class FilterButton extends Component {
 
         return(
             <div className="filterButton">
-                <p className="filterButtonText">Filter</p>
+                <p className="filterButtonText">Filter ===</p>
             </div>
         )
     }
